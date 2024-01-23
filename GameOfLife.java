@@ -70,17 +70,15 @@ public class GameOfLife {
 		int[][] board = new int[rows + 2][cols + 2];
 		//// Replace the following statement with your code.
 
-		String line ;
-		int t = 1;
-		while(!in.isEmpty()) {
-			line = in.readLine();
-				for(int i =0; i < line.length();i++) {
-					if(line.charAt(i)=='x') {
-						board[t][i + 1] = 1;
-					
+		for (int i = 1 ; i <= rows ; i++){
+			String readline ; in.readLine();
+			if(readline!=null){
+				for(int t = 0 ; t < readline.length() ; t++){
+					if (readline.charAt() == 'x'){
+						board[i][j+1] = 1;
+					}
 				}
 			}
-			t++;
 		}
 		return board;
 	}
