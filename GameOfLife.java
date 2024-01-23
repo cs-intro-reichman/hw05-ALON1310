@@ -70,15 +70,22 @@ public class GameOfLife {
 		int[][] board = new int[rows + 2][cols + 2];
 		//// Replace the following statement with your code.
 
-		for (int i = 1 ; i <= rows ; i++){
-			String line = in.readLine();
-			if( line != null ){
-				for(int t = 0 ; t < line.length() ; t++){
-					if (line.charAt(t) == 'x'){
-						board[i][t+1] = 1;
-					}
+		for(int i = 0 ; i < rows+2; i++){
+			for(int j = 0 ; j < cols+2 ; j++){
+				board[i][j]=0;
+			}
+		}
+		String line;
+		int t = 1;
+		while (!in.isEmpty()){
+			line = in.readLine() ;
+			if (t < board.length-1) {
+				for (int i = 0 ; i < line.length() ; i++){
+					if(line.charAt(i)=='x')
+						board[t][i+1] = 1 ;
 				}
 			}
+			t++;
 		}
 		return board;
 	}
@@ -128,10 +135,10 @@ public class GameOfLife {
 		//// Replace the following statement with your code.
 
 		int count = 0 ;
-		for(int t = i-1 ; t <= i+1  ; t++){
-			for ( int c = j-1 ; c <= j+1 ; c++){
+		for(int t = -1 ; t < 2  ; t++){
+			for ( int c = -1 ; c < 2 ; c++){
 				if(board[i+t][j+c]==1) {
-					if(t!=j || c!=i){
+					if(t!=0 || c!=0){
 						if(board[t][c]==1){
 							count++;
 						}
@@ -151,7 +158,7 @@ public class GameOfLife {
 
 			for(int i = 1 ; i<arr.length-1; i++){
 
-				for (int j = 1 ; j < arr.length-1 ; j ++){
+				for (int j = 1 ; j < arr[0].length-1 ; j ++){
 
 				System.out.printf("%3s",arr[i][j]);
 			}
