@@ -75,7 +75,7 @@ public class GameOfLife {
 			}
 		String line ;
 		int t = 1;
-		while(!in.isEmpty()) {
+		while(line != null) {
 			line = in.readLine();
 			if (t < board.length - 1) {
 				for(int i =0; i < line.length();i++) {
