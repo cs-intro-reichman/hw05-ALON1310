@@ -71,10 +71,10 @@ public class GameOfLife {
 		//// Replace the following statement with your code.
 
 		for (int i = 1 ; i <= rows ; i++){
-			String readline ; in.readLine();
-			if(readline!=null){
-				for(int t = 0 ; t < readline.length() ; t++){
-					if (readline.charAt(t) == 'x'){
+			String line = in.readLine();
+			if( line != null ){
+				for(int t = 0 ; t < line.length() ; t++){
+					if (line.charAt(t) == 'x'){
 						board[i][t+1] = 1;
 					}
 				}
