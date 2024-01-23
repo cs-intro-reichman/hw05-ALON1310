@@ -75,12 +75,12 @@ public class GameOfLife {
 			}
 		String line ;
 		int t = 1;
-		while(line != null) {
+		while(!in.isEmpty()) {
 			line = in.readLine();
 			if (t < board.length - 1) {
 				for(int i =0; i < line.length();i++) {
 					if(line.charAt(i)=='x')
-						board[t][i+1]=1;
+						board[i+1][t]=1;
 				}
 			}
 			t++;
