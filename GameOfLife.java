@@ -68,23 +68,14 @@ public class GameOfLife {
 		int[][] board = new int[rows + 2][cols + 2];
 		//// Replace the following statement with your code.
 
-			for (int i = 0 ; i<rows+2; i++){
-				for (int j =0 ; j<cols+2 ; j++){
-					board [i][j]=0;
+			for(int i =1 ; i <=rows ; i++){
+				String line = in.readLine();
+				for(int j = 0 ; j <line.length(); j++){
+					if (line.charAt(j) == 'x' ){
+						board[i][j]=1;
+					}
 				}
 			}
-		String line ;
-		int t = 1;
-		while(!in.isEmpty()) {
-			line = in.readLine();
-			if (t < board.length - 1) {
-				for(int i =0; i < line.length();i++) {
-					if(line.charAt(i)=='x')
-						board[i+1][t]=1;
-				}
-			}
-			t++;
-		}
 		return board;
 	}
 	
@@ -149,9 +140,9 @@ public class GameOfLife {
 		//// Write your code here.
 
 
-			for(int i = 1 ; i<arr.length-1; i++){
+			for(int i = 1 ; i <arr.length-1; i++){
 
-				for (int j = 1 ; j < arr.length-1 ; j ++){
+				for (int j = 1 ; j < arr[0].length-1 ; j ++){
 
 				System.out.printf("%3s",arr[i][j]);
 			}
