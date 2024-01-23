@@ -139,9 +139,8 @@ public class GameOfLife {
 			for ( int c = -1 ; c < 2 ; c++){
 				if(board[i+t][j+c]==1) {
 					if(t!=0 || c!=0){
-						if(board[t][c]==1){
 							count++;
-						}
+
 
 					}
 
