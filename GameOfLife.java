@@ -75,7 +75,7 @@ public class GameOfLife {
 			if(readline!=null){
 				for(int t = 0 ; t < readline.length() ; t++){
 					if (readline.charAt() == 'x'){
-						board[i][j+1] = 1;
+						board[i][t+1] = 1;
 					}
 				}
 			}
