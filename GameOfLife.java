@@ -74,7 +74,7 @@ public class GameOfLife {
 			String readline ; in.readLine();
 			if(readline!=null){
 				for(int t = 0 ; t < readline.length() ; t++){
-					if (readline.charAt() == 'x'){
+					if (readline.charAt(t) == 'x'){
 						board[i][t+1] = 1;
 					}
 				}
