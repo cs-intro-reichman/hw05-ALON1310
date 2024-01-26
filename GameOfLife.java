@@ -70,6 +70,7 @@ public class GameOfLife {
 		int[][] board = new int[rows + 2][cols + 2];
 		//// Replace the following statement with your code.
 
+		/* the for's code is needless, all the cells in an int arrays is auto-initialized to 0 */
 		for(int i = 0 ; i < rows+2; i++){
 			for(int j = 0 ; j < cols+2 ; j++){
 				board[i][j]=0;
@@ -119,6 +120,8 @@ public class GameOfLife {
 	// Uses the count(board,i,j) function to count the number of alive neighbors.
 	public static int cellValue(int[][] board, int i, int j) {
 		//// Replace the following statement with your code.
+		
+		 // nice and elegant, LIKE!
 		int n = count(board,i,j);
 		if (board[i][j]==1 && (n < 2) )return  0;
 		if ((board[i][j]==1) && ((n == 2) || (n == 3))) return  1;
